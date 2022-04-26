@@ -41,6 +41,10 @@ input_Chat_bgcolor - zona input in basso
     height: 100%;
     object-fit: contain;
 }
+.bg_type {
+    background-color: var(--input_Chat_bgcolor);
+}
+
 
 
 /*#endregion*/

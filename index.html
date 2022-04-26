@@ -70,11 +70,17 @@
                 <!-- Tutta la Chat (annidamento semi-ok) -->
                 <div :class="message_zone_class">
                     <!-- Secondo me vanno tutte col V-For, per ogni user e messaggio di risposta -->
-                    <div class="col-9 h_message bg-info mb-3"></div>
-                    <div class="col-9 h_message bg-info"></div>
+                    <div class="col-9 h_message bg-info mb-3 border_visible"></div>
                 </div>
                 <!-- Input Type Text e smile/vocale -->
-                <div class="col-12 h_xs d-flex"></div>
+                <div :class="type_message_class">
+                    <!-- Smile icon -->
+                    <div class="col-2 h-100 border_visible"></div>
+                    <!-- Input messaggio -->
+                    <div class="col-8 h-100 border_visible"></div>
+                    <!-- Audio Icon -->
+                    <div class="col-2 h-100 border_visible"></div>
+                </div>
             </div>
         </main>    
     </div>
