@@ -79,7 +79,7 @@
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div v-for="(name, i) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center">
+                    <div v-for="(contatto, i) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(contatto)">
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
                             <img class="pro_pics_xs" :src="contacts[i].avatar" alt="User_Profile_Picture">
@@ -87,7 +87,7 @@
                         <!-- UserName (dinamico) -->
                         <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
                             <ul class="unstyled pt-3">
-                                <li class="fs_lg">{{contacts[i].name}}</li>
+                                <li class="fs_lg">{{contatto.name}}</li>
                                 <li class="fs_md">Ultimo Messaggio Inviato</li>
                             </ul>
                         </div>
@@ -130,11 +130,11 @@
                 <!-- Tutta la Chat - zona conclusa -->
                 <div :class="message_zone_class">
                     <!-- messaggi dell'utente Tutti con v-for-->
-                    <div class="col-9 h_message mb-2 d-flex justify-content-end">
+                    <div v-for="(activeChat, i) in contacts" class="col-9 h_message mb-2 d-flex justify-content-end">
                         <div class="col-5 h-75 bg_chat_user d-flex justify-content-evenly align-items-center flex-nowrap">
                             <!-- Messaggio Sent -->
                             <div class="col-10 h-100 d-flex justify-content-start align-items-center">
-                                <span class="ps-3">Qui Messaggio CHAT</span>
+                                <span class="ps-3">{{contacts[i].activeChat}}</span>
                             </div>
                             <!-- Ora Messaggio Sent -->
                             <div class="col-2 h-100 d-flex justify-content-end align-items-end">
@@ -150,6 +150,7 @@
                             <div class="col-10 h-100 d-flex justify-content-start align-items-center">
                                 <span class="ps-3">Qui Messaggio CHAT</span>
                             </div>
+                            <!-- Ora Messaggio Received -->
                             <div class="col-2 h-100 d-flex justify-content-end align-items-end">
                                 <span class="fs_sm pt-2 pe-2"> <span style="color: transparent;" class="px-2">Qui data transparent</span>ora</span>
                             </div>
