@@ -27,16 +27,16 @@ const app = new Vue({
         row_aside_class: "row h-100 g-0 d-flex flex-column flex-wrap",
         row_main_class: "row h-100 g-0 d-flex flex-column flex-wrap",
         active_chat_class: "col-12 h_xs d-flex bg_active_Chat flex-row justify-content-between align-content-center",
-        notification_chat_class: "col-12 h_sm d-flex flex-nowrap justify-content-center align-content-center bg_ricevi_notifiche",
-        input_search_class: "col-12 h_xs gx-4 bg_active_Chat d-flex justify-content-center align-items-center",
+        notification_chat_class: "col-12 h_sm flex-nowrap flex_center bg_ricevi_notifiche",
+        input_search_class: "col-12 h_xs bg_input_search gx-4 flex_center",
         all_chat_class: "col-12 h_md bg_Chat_and_Answer d-flex flex-column justify-content-start overflow_s",
         // Main zone
         upper_user_chat: "col-12 h_xs d-flex bg_active_Chat flex-row justify-content-between align-content-center",
         message_zone_class: "col-12 h_xl overflow_s bg_chat_image d-flex flex-column align-items-center p-5",
-        type_message_class: "col-12 h_xs d-flex flex-nowrap justify-content-center align-items-center bg_type",
-        under_icons_utilities: "col-1 h-100 d-flex justify-content-center align-items-center",
+        type_message_class: "col-12 h_xs flex_center flex-nowrap bg_type",
+        under_icons_utilities: "col-1 h-100 flex_center",
         // Main Zone - zona Upper
-        users_friend_profile: "col-3 h-100 d-flex justify-content-center align-items-center flex-wrap",
+        users_friend_profile: "col-3 h-100 flex_center flex-wrap",
         upper_zone_icons: "col-2 h-100 d-flex align-items-center gap-3 mx-3 justify-content-end",
         // Struttura dati dei contatti
         contacts: [
