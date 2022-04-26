@@ -1,0 +1,89 @@
+/*#region Palette colori da Figma  */
+
+/* 
+Text-color - colore del testo (dark)
+Chat_and_Answer-Color - colore dei div chat e della navbar con le chat
+Body_Header_BG - header del body
+Dark_icons_color - icone smile microfono dell'input
+ricevi_bg_color - navbar, ricevi nuove notifiche
+upper_icons_color - icone sopra dove c'è utente
+ser_message_bgcolor - messaggi dell'utente
+body_main_bgcolor - colore del main body
+active_Chat_bgcolor - chat attiva con background, guarda screen michele
+input_Chat_bgcolor - zona input in basso
+*/
+:root {
+    --Text-color: rgba(0, 0, 0, 1);
+    --Chat_and_Answer-Color: rgba(255, 255, 255, 1); 
+    --Body_Header_BG: rgba(0, 150, 136, 1);
+    --Dark_icons_color: rgba(107, 115, 118, 1);
+    --ricevi_bg_color: rgba(142, 218, 252, 1);
+    --upper_icons_color: rgba(187, 188, 189, 1);
+    --user_message_bgcolor: rgba(213, 249, 186, 1);
+    --body_main_bgcolor: rgba(217, 219, 213, 1);
+    --active_Chat_bgcolor: rgba(234, 234, 234, 1);
+    --input_Chat_bgcolor: rgba(243, 238, 234, 1);
+}
+
+/*#endregion*/
+
+/*#region Elementi di contenimento */
+
+/* Elemento radice per dimensioni */
+:root {
+    --Body_width: 100vw;
+    --Body-Heigth: 100vh;
+}
+
+/* Regola di reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Regole del Body */
+body {
+    width: var(--Body_width);
+    height: var(--Body-Heigth);
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    z-index: -1;
+}
+
+/* Header in sottofondo */
+.b_header {
+    width: var(--Body_width);
+    height: 10%;
+    background-color: var(--Body_Header_BG);
+}
+
+/* Main in sottofondo */
+.b_main {
+    width: var(--Body_width);
+    height: calc(100vh - 10%);
+    background-color: var(--body_main_bgcolor);
+}
+
+/* Container principale */
+.m_container {
+    width: calc(100vw - 10%);
+    height: calc(100vh - 5%);
+    background-color: crimson;
+}
+/*#endregion */
+
+/*#region Utilities principali  */
+.absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+}  
+/*#endregion */
+
+
+
+
+
+
