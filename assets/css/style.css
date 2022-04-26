@@ -140,23 +140,31 @@ body {
 }  
 
 /* Altezze Fisse, quelle in % sono da sistemare */
+.h_user {
+    height: 85px;
+}
+
+
+
+
+
 
 /* Altezza account e input search, input text della chat */
 .h_xs {
-    height: 10%;
+    height: 85px;
 }
 
 /* Altezza ricevi notifiche */
 .h_sm {
-    height: 12%;
+    height: 100px;
 }
 /* Altezza per le Chat */
 .h_md {
-    height: calc(100% - 32%);
+    height: calc(100% - 270px);
 }
 /* Altezza per tutta la chat coi messaggi */
 .h_xl {
-    height: calc(100% - 20%);
+    height: calc(100% - 170px);
 }
 /* Altezza per le Chat da ripetere, per ora questa è fissa */
 .h_chat {
@@ -198,8 +206,6 @@ body {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-
-
 
 /* Pro Pics Utente (sofia) */
 .pro_pics_xs {
