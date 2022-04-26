@@ -79,7 +79,7 @@
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div v-for="(name, i) in contacts" class="col-12 h_chat bg_active_Chat d-flex justify-content-center align-items-center">
+                    <div v-for="(name, i) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center">
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
                             <img class="pro_pics_xs" :src="contacts[i].avatar" alt="User_Profile_Picture">
@@ -131,11 +131,29 @@
                 <div :class="message_zone_class">
                     <!-- messaggi dell'utente Tutti con v-for-->
                     <div class="col-9 h_message mb-2 d-flex justify-content-end">
-                        <div class="col-5 h-75 bg_chat_user"></div>
+                        <div class="col-5 h-75 bg_chat_user d-flex justify-content-evenly align-items-center flex-nowrap">
+                            <!-- Messaggio Sent -->
+                            <div class="col-10 h-100 d-flex justify-content-start align-items-center">
+                                <span class="ps-3">Qui Messaggio CHAT</span>
+                            </div>
+                            <!-- Ora Messaggio Sent -->
+                            <div class="col-2 h-100 d-flex justify-content-end align-items-end">
+                                <span class="pt-2 pe-2 fs_sm"> <span style="color: transparent;" class="px-2">Qui data transparent</span>ora</span>
+                            </div>
+                        </div>
                     </div>
                     <!-- messaggi dell'amico utente - Tutti con v-for-->
                     <div class="col-9 h_message mb-2 d-flex justify-content-start">
-                        <div class="col-5 h-75 bg_chat_friend"></div>
+                        <!-- Messaggio Received -->
+                        <div class="col-5 h-75 bg_chat_friend d-flex justify-content-evenly align-items-center flex-nowrap">
+                            <!-- Messaggio Received -->
+                            <div class="col-10 h-100 d-flex justify-content-start align-items-center">
+                                <span class="ps-3">Qui Messaggio CHAT</span>
+                            </div>
+                            <div class="col-2 h-100 d-flex justify-content-end align-items-end">
+                                <span class="fs_sm pt-2 pe-2"> <span style="color: transparent;" class="px-2">Qui data transparent</span>ora</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Input Type Text e smile/vocale - zona conclusa -->

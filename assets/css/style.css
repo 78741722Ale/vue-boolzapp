@@ -224,6 +224,10 @@ body {
     font-size: 1rem;
     color: rgb(150, 149, 149);
 }
+.fs_sm {
+    font-size: 0.8rem;
+    color: lightgray;
+}
 
 /* Bordo visibile di colonne */
 .border_visible {
