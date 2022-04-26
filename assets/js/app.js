@@ -28,6 +28,9 @@ const app = new Vue({
         active_chat_class: "col-12 h_xs d-flex bg_active_Chat flex-row justify-content-between align-content-center",
         notification_chat_class: "col-12 h_sm d-flex flex-nowrap justify-content-center align-content-center bg_ricevi_notifiche",
         input_search_class: "col-12 h_xs gx-4 bg_active_Chat d-flex justify-content-center align-items-center",
+        all_chat_class: "col-12 h_md bg_Chat_and_Answer d-flex flex-column justify-content-start overflow_s",
+        upper_user_chat: "col-12 h_xs d-flex bg_active_Chat flex-row justify-content-between align-content-center",
+        message_zone_class: "col-12 h_xl overflow_s bg_chat_image d-flex flex-column align-items-center p-5",
         // Struttura dati dei contatti
         contacts: [
             { // Michele

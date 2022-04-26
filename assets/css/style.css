@@ -34,7 +34,13 @@ input_Chat_bgcolor - zona input in basso
 .bg_Chat_and_Answer {
     background-color: var(--Chat_and_Answer-Color);
 }
-
+/* Sfondo della chat */
+.bg_chat_image {
+    background-image: url(../src/mine.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 
 /*#endregion*/
@@ -132,6 +138,10 @@ body {
 /* Altezza per le Chat da ripetere, per ora questa è fissa */
 .h_chat {
     height: 90px;
+}
+/* Altezza fissa dei messaggi */
+.h_message {
+    height: 80px;
 }
 
 /* Pro Pics Utente (sofia) */

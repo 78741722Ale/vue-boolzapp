@@ -23,7 +23,8 @@
     <!-- Link a div con ID Principale -->
     <!-- Creo i due maxi container- aside e main -->
     <div class="m_container absolute_center" id='app'>
-        <!-- Aside, zona di tutte le chat -->
+        <!-- Aside, zona di tutte le chat (annidamento semi-ok)  -->
+        <!-- Qui dai altezze fisse o si spacca tutto -->
         <aside id="app_aside">
             <div :class="row_aside_class">
                 <!-- Utente (annidamento semi-ok) -->
@@ -47,20 +48,31 @@
                     <!-- Input Type di ricerca -->
                     <div class="col-10 h-100 border_visible"></div>
                 </div>
-                <!-- Tutte le chat, qua va anche scrollbar -->
-                <div class="col-12 h_md bg_Chat_and_Answer d-flex overflow_s">
+                <!-- Tutte le chat, qua va anche scrollbar (annidamento semi-ok) -->
+                <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div class="col-12 h_chat bg_active_Chat"></div>
+                    <div class="col-12 h_chat bg_active_Chat border_visible"></div>
                 </div>
             </div>
         </aside>
+
         <!-- Main, zona di chat -->
+        <!-- Qui dai altezze fisse o si spacca tutto -->
         <main id="app_main">
             <div :class="row_main_class">
-                <!-- Utente della chat, con ultimo accesso -->
-                <div class="col-12 h_xs bg-danger"></div>
-                <!-- Tutta la Chat, qui andrà scrollbar -->
-                <div class="col-12 h_xl bg-info"></div>
+                <!-- Utente della chat, con ultimo accesso (annidamento semi-ok) -->
+                <div :class="upper_user_chat">
+                    <!-- Profilo Utente della chat  (dovrebbe esser dinamico) -->
+                    <div class="col-2 h-100 border_visible"></div>
+                    <!-- Icone allegati, search ecc.. -->
+                    <div class="col-2 h-100 border_visible"></div>
+                </div>
+                <!-- Tutta la Chat (annidamento semi-ok) -->
+                <div :class="message_zone_class">
+                    <!-- Secondo me vanno tutte col V-For, per ogni user e messaggio di risposta -->
+                    <div class="col-9 h_message bg-info mb-3"></div>
+                    <div class="col-9 h_message bg-info"></div>
+                </div>
                 <!-- Input Type Text e smile/vocale -->
                 <div class="col-12 h_xs d-flex"></div>
             </div>
