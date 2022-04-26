@@ -54,7 +54,10 @@ input_Chat_bgcolor - zona input in basso
     background-color: var(--Chat_and_Answer-Color);
     border-radius: 10px;
 }
-
+/* Icone Light */
+.bg_icons_light {
+    color: var(--upper_icons_color);
+}
 
 /*#endregion*/
 
@@ -77,7 +80,7 @@ input_Chat_bgcolor - zona input in basso
 body {
     width: var(--Body_width);
     height: var(--Body-Heigth);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     position: relative;
     z-index: -1;
 }
@@ -166,25 +169,33 @@ body {
 
 /* Pro Pics Utente (sofia) */
 .pro_pics_xs {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-    border-radius: 50%;
+    width: 75%;
+    height: 75%;
 }
 /* Pro Pics vari utenti */
 .pro_pics_sm {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
+    width: 90%;
+    height: 90%;
+}
+
+/* Common delle pro pics */
+.pro_pics_xs,
+.pro_pics_sm {
+    object-fit: cover;
     border-radius: 50%;
 }
-/* Immagini delle celle pro pics */
-.pro_pics_xs img,
-.pro_pics_sm img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+
+/* font nome utente */
+.fs_lg {
+    font-size: 1.25rem;
 }
+/* Font titolo e accesso */
+.fs_md {
+    font-size: 1rem;
+    color: rgb(150, 149, 149);
+}
+
+
 
 /* Bordo visibile di colonne */
 .border_visible {
@@ -207,7 +218,21 @@ body {
     color: var(--Dark_icons_color);
 }
 
+/* Fa MD */
+.fa-md {
+    font-size: 1.25rem !important;
+    color: var(--Dark_icons_color);
+}
+
+/* List Item senza stile */
+.unstyled {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.fa-ellipsis {
+    transform:rotate(90deg)!important;
+}
+
 /*#endregion */
-
-
 

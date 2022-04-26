@@ -35,6 +35,9 @@ const app = new Vue({
         message_zone_class: "col-12 h_xl overflow_s bg_chat_image d-flex flex-column align-items-center p-5",
         type_message_class: "col-12 h_xs d-flex flex-nowrap justify-content-center align-items-center bg_type",
         under_icons_utilities: "col-1 h-100 d-flex justify-content-center align-items-center",
+        // Main Zone - zona Upper
+        users_friend_profile: "col-3 h-100 d-flex justify-content-center align-items-center flex-wrap",
+        upper_zone_icons: "col-2 h-100 d-flex align-items-center gap-3 mx-3 justify-content-end",
         // Struttura dati dei contatti
         contacts: [
             { // Michele

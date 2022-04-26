@@ -48,10 +48,26 @@
                     <!-- Input Type di ricerca -->
                     <div class="col-10 h-100 border_visible"></div>
                 </div>
-                <!-- Tutte le chat, qua va anche scrollbar (annidamento semi-ok) -->
+                <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div class="col-12 h_chat bg_active_Chat border_visible"></div>
+                    <div class="col-12 h_chat bg_active_Chat d-flex justify-content-center align-items-center">
+                        <!-- Pro pics (dinamica) -->
+                        <div class="col-2 h-100 d-flex justify-content-center align-items-center">
+                            <img class="pro_pics_xs" src="./assets/src/avatar_3.jpg" alt="User_Profile_Picture">
+                        </div>
+                        <!-- UserName (dinamico) -->
+                        <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
+                            <ul class="unstyled pt-3">
+                                <li class="fs_lg">UserName</li>
+                                <li class="fs_md">Ultimo Messaggio Inviato</li>
+                            </ul>
+                        </div>
+                        <!-- Orario Mex (dinamico) -->
+                        <div class="col-2 h-100 d-flex flex-column pt-3 pe-3 align-items-end justify-content-start">
+                            <span class="fs_md">Orario</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -62,20 +78,36 @@
             <div :class="row_main_class">
                 <!-- Utente della chat, con ultimo accesso (annidamento semi-ok) -->
                 <div :class="upper_user_chat">
-                    <!-- Profilo Utente della chat  (dovrebbe esser dinamico) -->
-                    <div class="col-2 h-100 border_visible"></div>
+                    <!-- Profilo Utente della chat (dovrebbe esser dinamico, con V-for) -->
+                    <div :class="users_friend_profile">
+                        <!-- Pro pics (dinamica) -->
+                        <div class="col-4 h-100 d-flex justify-content-center align-items-center">
+                            <img class="pro_pics_sm ps-1" src="./assets/src/avatar_3.jpg" alt="User_Profile_Picture">
+                        </div>
+                        <!-- UserName (dinamico) -->
+                        <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
+                            <ul class="unstyled pt-3">
+                                <li>UserName</li>
+                                <li>Ultimo Accesso</li>
+                            </ul>
+                        </div>
+                    </div>
                     <!-- Icone allegati, search ecc.. -->
-                    <div class="col-2 h-100 border_visible"></div>
+                    <div :class="upper_zone_icons">
+                        <i class="fa-solid fa-search fa-md bg_icons_light"></i>
+                        <i class="fa-solid fa-paperclip fa-md bg_icons_light"></i>
+                        <i class="fa-solid fa-ellipsis fa-md bg_icons_light"></i>
+                    </div>
                 </div>
                 <!-- Tutta la Chat - zona conclusa -->
                 <div :class="message_zone_class">
                     <!-- messaggi dell'utente Tutti con v-for-->
-                    <div class="col-9 h_message mb-3 d-flex justify-content-end">
-                        <div class="col-5 h-100 bg_chat_user"></div>
+                    <div class="col-9 h_message mb-2 d-flex justify-content-end">
+                        <div class="col-5 h-75 bg_chat_user"></div>
                     </div>
                     <!-- messaggi dell'amico utente - Tutti con v-for-->
-                    <div class="col-9 h_message mb-3 d-flex justify-content-start">
-                        <div class="col-5 h-100 bg_chat_friend"></div>
+                    <div class="col-9 h_message mb-2 d-flex justify-content-start">
+                        <div class="col-5 h-75 bg_chat_friend"></div>
                     </div>    
                 </div>
                 <!-- Input Type Text e smile/vocale - zona conclusa -->
