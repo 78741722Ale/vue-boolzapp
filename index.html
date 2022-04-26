@@ -82,7 +82,7 @@
                     <div v-for="(contatto, i) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(contatto)">
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
-                            <img class="pro_pics_xs" :src="contacts[i].avatar" alt="User_Profile_Picture">
+                            <img class="pro_pics_xs" :src="'./assets/src/avatar' + contatto.avatar + '.jpg'" alt="User_Profile_Picture">
                         </div>
                         <!-- UserName (dinamico) -->
                         <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
