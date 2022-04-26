@@ -62,7 +62,6 @@ const app = new Vue({
                 ],
             },
             { // Fabio
-
                 name: 'Fabio',
                 avatar: '_2',
                 visible: true,
