@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,23 @@
     <!-- Titolo Pagina -->
     <title>Vue Boolzapp</title>
     <!-- Link Foglio stile Bootstrap -->
-    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous'>
     <!-- Link a foglio di style -->
     <link rel='stylesheet' href='./assets/css/style.css'>
     <!-- Link a Font-Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
     <!-- Header del body -->
     <section class="b_header"></section>
     <!-- Main del Body -->
     <section class="b_main"></section>
-    
+
     <!-- Link a div con ID Principale -->
     <!-- Creo i due maxi container- aside e main -->
     <div class="m_container absolute_center" id='app'>
@@ -30,26 +35,47 @@
                 <!-- Utente (annidamento semi-ok) -->
                 <div :class="active_chat_class">
                     <!-- Profilo Utente Attivo (qua intanto scrivi ma poi cambia con dinamica) -->
-                    <div class="col-3 h-100 border_visible"></div>
+                    <div class="col-3 h-100 d-flex align-items-center justify-content-center">
+                        <!-- Pro pics (dinamica) -->
+                        <div class="col-6 h-100 flex_center">
+                            <img class="pro_pics_xs" src="./assets/src/avatar_3.jpg" alt="User_Profile_Picture">
+                        </div>
+                        <!-- UserName (dinamico) -->
+                        <div class="col-6 h-100 d-flex flex-column align-items-start justify-content-center">
+                            <ul class="unstyled pt-3 ps-1">
+                                <li>UserName</li>
+                            </ul>
+                        </div>
+                    </div>
                     <!-- Icone Utente Attivo -->
-                    <div class="col-3 h-100 border_visible"></div>
+                    <div class="col-3 h-100 flex_center gap-3">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis fa-md bg_icons_light"></i>
+                    </div>
                 </div>
-                <!-- Notifiche (annidamento semi-ok) -->
+                <!-- Notifiche (zona OK) -->
                 <div :class="notification_chat_class">
                     <!-- Icona notifiche -->
-                    <div class="col-2 h-100 border_visible"></div>
+                    <div class="col-2 h-100 flex_center">
+                        <span class="bell flex_center"> <i class="fa-solid fa-bell-slash"></i> </span>
+                    </div>
                     <!-- Messaggi di testo -->
-                    <div class="col-10 h-100 border_visible"></div>
+                    <div class="col-10 h-100 d-flex justify-content-start align-items-center">
+                        <ul class="unstyled ps-1 pt-3">
+                            <li>Ricevi Notifiche di nuovi messaggi</li>
+                            <li class="fs_md">Attiva notifiche desktop</li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- input Search (annidamento semi-ok) -->
+                <!-- input Search (zona OK) -->
                 <div :class="input_search_class">
-                    <!-- Pulsante ricerca -->
+                    <!-- Pulsante ricerca + input type-->
                     <div class="col-12 h-100 flex_center ">
-                        <button class="h_input_search w_15 flex_center border_l_button"><i class="fa-solid fa-search fa-md bg_icons_light"></i></button>
+                        <button class="h_input_search w_15 flex_center border_l_button"><i
+                                class="fa-solid fa-search fa-md bg_icons_light"></i></button>
                         <input class="h_input_search w_85 border_r_input" type="text">
                     </div>
-                    <!-- Input Type di ricerca -->
-                    
                 </div>
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
@@ -111,7 +137,7 @@
                     <!-- messaggi dell'amico utente - Tutti con v-for-->
                     <div class="col-9 h_message mb-2 d-flex justify-content-start">
                         <div class="col-5 h-75 bg_chat_friend"></div>
-                    </div>    
+                    </div>
                 </div>
                 <!-- Input Type Text e smile/vocale - zona conclusa -->
                 <div :class="type_message_class">
@@ -129,7 +155,7 @@
                     </div>
                 </div>
             </div>
-        </main>    
+        </main>
     </div>
 
     <!-- Link a JS di VUE -->
@@ -137,4 +163,5 @@
     <!-- Link a JS -->
     <script src='./assets/js/app.js'></script>
 </body>
+
 </html>

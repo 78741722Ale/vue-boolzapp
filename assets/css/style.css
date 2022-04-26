@@ -250,6 +250,15 @@ body {
     color: var(--Dark_icons_color);
 }
 
+.bell {
+    width: 65%;
+    height: 60%;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    color: var(--ricevi_bg_color);
+}
+
 /* Fa MD */
 .fa-md {
     font-size: 1.25rem !important;
