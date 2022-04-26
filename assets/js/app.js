@@ -22,6 +22,12 @@ const app = new Vue({
     el: '#app',
     // dati contenuti
     data: {
+        // Classi con V-BIND
+        row_aside_class: "row h-100 g-0 d-flex flex-column flex-wrap",
+        row_main_class: "row h-100 g-0 d-flex flex-column flex-wrap",
+        active_chat_class: "col-12 h_xs d-flex bg_active_Chat flex-row justify-content-between align-content-center",
+        notification_chat_class: "col-12 h_sm d-flex flex-nowrap justify-content-center align-content-center bg_ricevi_notifiche",
+        input_search_class: "col-12 h_xs gx-4 bg_active_Chat d-flex justify-content-center align-items-center",
         // Struttura dati dei contatti
         contacts: [
             { // Michele

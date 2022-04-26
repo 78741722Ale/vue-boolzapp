@@ -25,6 +25,15 @@ input_Chat_bgcolor - zona input in basso
     --input_Chat_bgcolor: rgba(243, 238, 234, 1);
 }
 
+.bg_active_Chat {
+    background-color: var(--active_Chat_bgcolor);
+}
+
+.bg_ricevi_notifiche {
+    background-color: var(--ricevi_bg_color);
+}
+
+
 /*#endregion*/
 
 /*#region Elementi di contenimento */
@@ -117,6 +126,28 @@ body {
 .h_xl {
     height: calc(100% - 20%);
 }
+
+/* Pro Pics Utente */
+.pro_pics {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.pro_pics img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Bordo visibile di colonne */
+.border_visible {
+    border: 1px solid black;
+}
+
+
+
 /*#endregion */
 
 
