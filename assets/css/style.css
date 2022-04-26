@@ -67,9 +67,28 @@ body {
 
 /* Container principale */
 .m_container {
+    display: flex;
     width: calc(100vw - 10%);
     height: calc(100vh - 5%);
-    background-color: crimson;
+    background-color: var(--active_Chat_bgcolor);
+}
+
+/* Aside */
+#app_aside,
+#app_main {
+    height: 100%;
+    border: 1px solid black;
+}
+
+
+/* Aside Container */
+#app_aside{
+    width: 35%;
+}
+
+/* Main Container */
+#app_main {
+    width: calc(100% - 35%);
 }
 /*#endregion */
 
@@ -80,6 +99,22 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) ;
 }  
+
+/* Altezze Fisse */
+
+/* Altezza account e input search, input text della chat */
+.h_xs {
+    height: 10%;
+}
+/* Altezza ricevi notifiche */
+.h_sm {
+    height: 15%;
+}
+/* Altezza per le Chat */
+.h_md {
+    height: calc(100% - 35%);
+}
+
 /*#endregion */
 
 
