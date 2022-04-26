@@ -36,21 +36,21 @@
                 <div :class="active_chat_class">
                     <!-- Profilo Utente Attivo (qua intanto scrivi ma poi cambia con dinamica) -->
                     <div class="col-3 h-100 d-flex align-items-center justify-content-center">
-                        <!-- Pro pics (dinamica) -->
+                        <!-- Pro pics (non dinamica) -->
                         <div class="col-6 h-100 flex_center">
-                            <img class="pro_pics_xs" src="./assets/src/avatar_3.jpg" alt="User_Profile_Picture">
+                            <img class="pro_pics_xs" src="./assets/src/avatar_io.jpg" alt="User_Profile_Picture">
                         </div>
                         <!-- UserName (dinamico) -->
                         <div class="col-6 h-100 d-flex flex-column align-items-start justify-content-center">
                             <ul class="unstyled pt-3 ps-1">
-                                <li>UserName</li>
+                                <li>Sofia</li>
                             </ul>
                         </div>
                     </div>
                     <!-- Icone Utente Attivo -->
                     <div class="col-3 h-100 flex_center gap-3">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-circle-notch bg_icons_light"></i>
+                        <i class="fa-solid fa-message bg_icons_light"></i>
                         <i class="fa-solid fa-ellipsis fa-md bg_icons_light"></i>
                     </div>
                 </div>
@@ -79,21 +79,21 @@
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div class="col-12 h_chat bg_active_Chat d-flex justify-content-center align-items-center">
+                    <div v-for="(name, i) in contacts" class="col-12 h_chat bg_active_Chat d-flex justify-content-center align-items-center">
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
-                            <img class="pro_pics_xs" src="./assets/src/avatar_3.jpg" alt="User_Profile_Picture">
+                            <img class="pro_pics_xs" :src="contacts[i].avatar" alt="User_Profile_Picture">
                         </div>
                         <!-- UserName (dinamico) -->
                         <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
                             <ul class="unstyled pt-3">
-                                <li class="fs_lg">UserName</li>
+                                <li class="fs_lg">{{contacts[i].name}}</li>
                                 <li class="fs_md">Ultimo Messaggio Inviato</li>
                             </ul>
                         </div>
                         <!-- Orario Mex (dinamico) -->
                         <div class="col-2 h-100 d-flex flex-column pt-3 pe-3 align-items-end justify-content-start">
-                            <span class="fs_md">Orario</span>
+                            <span class="fs_md">12:00</span>
                         </div>
                     </div>
                 </div>

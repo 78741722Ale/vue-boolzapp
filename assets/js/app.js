@@ -42,7 +42,7 @@ const app = new Vue({
         contacts: [
             { // Michele
                 name: 'Michele',
-                avatar: '_1',
+                avatar: './assets/src/avatar_1.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -63,7 +63,7 @@ const app = new Vue({
             },
             { // Fabio
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: './assets/src/avatar_2.jpg',
                 visible: true,
                 messages: [{
                     date: '20/03/2020 16:30:00',
@@ -84,7 +84,7 @@ const app = new Vue({
             },
             { // Samuele
                 name: 'Samuele',
-                avatar: '_3',
+                avatar: './assets/src/avatar_3.jpg',
                 visible: true,
                 messages: [{
                     date: '28/03/2020 10:10:40',
@@ -105,7 +105,7 @@ const app = new Vue({
             },
             { // Alessandro
                 name: 'Alessandro B.',
-                avatar: '_4',
+                avatar: './assets/src/avatar_4.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -121,7 +121,7 @@ const app = new Vue({
             },
             { // Alessandro L.
                 name: 'Alessandro L.',
-                avatar: '_5',
+                avatar: './assets/src/avatar_5.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -137,7 +137,7 @@ const app = new Vue({
             },
             { // Claudia
                 name: 'Claudia',
-                avatar: '_6',
+                avatar: './assets/src/avatar_6.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -158,7 +158,7 @@ const app = new Vue({
             },
             { // Federico
                 name: 'Federico',
-                avatar: '_7',
+                avatar: './assets/src/avatar_7.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -174,7 +174,7 @@ const app = new Vue({
             },
             { // Davide
                 name: 'Davide',
-                avatar: '_8',
+                avatar: './assets/src/avatar_8.jpg',
                 visible: true,
                 messages: [{
                     date: '10/01/2020 15:30:55',
@@ -194,5 +194,7 @@ const app = new Vue({
                 ],
             }
         ],
+        // Immagine Attiva
+        activeImage: 0,
     },
 })
