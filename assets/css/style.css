@@ -80,7 +80,6 @@ body {
     border: 1px solid black;
 }
 
-
 /* Aside Container */
 #app_aside{
     width: 35%;
@@ -108,13 +107,16 @@ body {
 }
 /* Altezza ricevi notifiche */
 .h_sm {
-    height: 15%;
+    height: 12%;
 }
 /* Altezza per le Chat */
 .h_md {
-    height: calc(100% - 35%);
+    height: calc(100% - 32%);
 }
-
+/* Altezza per tutta la chat coi messaggi */
+.h_xl {
+    height: calc(100% - 20%);
+}
 /*#endregion */
 
 
