@@ -28,10 +28,13 @@ input_Chat_bgcolor - zona input in basso
 .bg_active_Chat {
     background-color: var(--active_Chat_bgcolor);
 }
-
 .bg_ricevi_notifiche {
     background-color: var(--ricevi_bg_color);
 }
+.bg_Chat_and_Answer {
+    background-color: var(--Chat_and_Answer-Color);
+}
+
 
 
 /*#endregion*/
@@ -126,16 +129,28 @@ body {
 .h_xl {
     height: calc(100% - 20%);
 }
+/* Altezza per le Chat da ripetere, per ora questa è fissa */
+.h_chat {
+    height: 90px;
+}
 
-/* Pro Pics Utente */
-.pro_pics {
+/* Pro Pics Utente (sofia) */
+.pro_pics_xs {
     width: 75px;
     height: 75px;
     object-fit: contain;
     border-radius: 50%;
 }
-
-.pro_pics img {
+/* Pro Pics vari utenti */
+.pro_pics_sm {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+/* Immagini delle celle pro pics */
+.pro_pics_xs img,
+.pro_pics_sm img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -146,7 +161,11 @@ body {
     border: 1px solid black;
 }
 
-
+/* Overflow scroll */
+.overflow_s {
+    overflow-x: hidden; /* in X Nascosco */
+    overflow-y: scroll; /* in Y presente */
+}
 
 /*#endregion */
 
