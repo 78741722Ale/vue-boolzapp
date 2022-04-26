@@ -44,7 +44,16 @@ input_Chat_bgcolor - zona input in basso
 .bg_type {
     background-color: var(--input_Chat_bgcolor);
 }
-
+/* Messaggi invio */
+.bg_chat_user {
+    background-color: var(--user_message_bgcolor);
+    border-radius: 10px;
+}
+/* Messaggi risposta */
+.bg_chat_friend {
+    background-color: var(--Chat_and_Answer-Color);
+    border-radius: 10px;
+}
 
 
 /*#endregion*/
@@ -121,7 +130,7 @@ body {
     transform: translate(-50%, -50%) ;
 }  
 
-/* Altezze Fisse */
+/* Altezze Fisse, quelle in % sono da sistemare */
 
 /* Altezza account e input search, input text della chat */
 .h_xs {
@@ -146,6 +155,13 @@ body {
 /* Altezza fissa dei messaggi */
 .h_message {
     height: 80px;
+}
+
+/* h input messaggio */
+.h_input_message {
+    height: 60%;
+    border: none;
+    border-radius: 0.35rem;
 }
 
 /* Pro Pics Utente (sofia) */
@@ -180,11 +196,18 @@ body {
     overflow-x: hidden; /* in X Nascosco */
     overflow-y: scroll; /* in Y presente */
 }
-
 /*#endregion */
 
+/*#region Classi Sovrascritte */
 
+/* Font dell'input messaggio */
+/* Sovrascritto la classe di F-Aw */
+.fa-xl {
+    font-size: 1.8rem !important;
+    color: var(--Dark_icons_color);
+}
 
+/*#endregion */
 
 
 

@@ -11,7 +11,7 @@
     <!-- Link a foglio di style -->
     <link rel='stylesheet' href='./assets/css/style.css'>
     <!-- Link a Font-Awesome -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==' crossorigin='anonymous' referrerpolicy='no-referrer' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -67,19 +67,31 @@
                     <!-- Icone allegati, search ecc.. -->
                     <div class="col-2 h-100 border_visible"></div>
                 </div>
-                <!-- Tutta la Chat (annidamento semi-ok) -->
+                <!-- Tutta la Chat - zona conclusa -->
                 <div :class="message_zone_class">
-                    <!-- Secondo me vanno tutte col V-For, per ogni user e messaggio di risposta -->
-                    <div class="col-9 h_message bg-info mb-3 border_visible"></div>
+                    <!-- messaggi dell'utente Tutti con v-for-->
+                    <div class="col-9 h_message mb-3 d-flex justify-content-end">
+                        <div class="col-5 h-100 bg_chat_user"></div>
+                    </div>
+                    <!-- messaggi dell'amico utente - Tutti con v-for-->
+                    <div class="col-9 h_message mb-3 d-flex justify-content-start">
+                        <div class="col-5 h-100 bg_chat_friend"></div>
+                    </div>    
                 </div>
-                <!-- Input Type Text e smile/vocale -->
+                <!-- Input Type Text e smile/vocale - zona conclusa -->
                 <div :class="type_message_class">
                     <!-- Smile icon -->
-                    <div class="col-2 h-100 border_visible"></div>
+                    <div :class="under_icons_utilities">
+                        <i class="fa-regular fa-xl fa-face-smile"></i>
+                    </div>
                     <!-- Input messaggio -->
-                    <div class="col-8 h-100 border_visible"></div>
+                    <div class="col-10 h-100 d-flex justify-content-center align-items-center">
+                        <input class="w-100 px-2 h_input_message" type="text" placeholder="Scrivi un Messaggio">
+                    </div>
                     <!-- Audio Icon -->
-                    <div class="col-2 h-100 border_visible"></div>
+                    <div :class="under_icons_utilities">
+                        <i class="fa-solid fa-xl fa-microphone"></i>
+                    </div>
                 </div>
             </div>
         </main>    
