@@ -117,12 +117,12 @@ body {
 #app_aside,
 #app_main {
     height: 100%;
-    border: 1px solid black;
 }
 
 /* Aside Container */
 #app_aside{
     width: 35%;
+    border-right: 0.5px solid rgb(122, 122, 122);
 }
 
 /* Main Container */
@@ -139,11 +139,6 @@ body {
     transform: translate(-50%, -50%) ;
 }  
 
-/* Altezze Fisse, quelle in % sono da sistemare */
-.h_user {
-    height: 85px;
-}
-
 /* Altezza account e input search, input text della chat */
 .h_xs {
     height: 85px;
@@ -151,11 +146,11 @@ body {
 
 /* Altezza ricevi notifiche */
 .h_sm {
-    height: 100px;
+    height: 90px;
 }
 /* Altezza per le Chat */
 .h_md {
-    height: calc(100% - 270px);
+    height: calc(100% - 260px);
 }
 /* Altezza per tutta la chat coi messaggi */
 .h_xl {
@@ -252,7 +247,7 @@ body {
 }
 
 .bell {
-    width: 65%;
+    width: 60%;
     height: 60%;
     background-color: white;
     border-radius: 50%;
