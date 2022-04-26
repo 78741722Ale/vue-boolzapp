@@ -36,7 +36,7 @@ const app = new Vue({
         type_message_class: "col-12 h_xs flex_center flex-nowrap bg_type",
         under_icons_utilities: "col-1 h-100 flex_center",
         // Main Zone - zona Upper
-        users_friend_profile: "col-3 h-100 flex_center flex-wrap",
+        users_friend_profile: "col-4 h-100 flex_center flex-wrap",
         upper_zone_icons: "col-2 h-100 d-flex align-items-center gap-3 mx-3 justify-content-end",
         // Struttura dati dei contatti
         contacts: [

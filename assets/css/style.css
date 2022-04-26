@@ -204,8 +204,8 @@ body {
 }
 /* Pro Pics vari utenti */
 .pro_pics_sm {
-    width: 90%;
-    height: 90%;
+    width: 60%;
+    height: 80%;
 }
 
 /* Common delle pro pics */
@@ -268,7 +268,7 @@ body {
 /* List Item senza stile */
 .unstyled {
     list-style: none;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .fa-ellipsis {
@@ -283,6 +283,8 @@ body {
     justify-content: center;
 }
 
-
 /*#endregion */
 
+.none {
+    display: none;
+}
