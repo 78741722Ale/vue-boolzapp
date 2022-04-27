@@ -68,13 +68,13 @@
                     <!-- Pulsante ricerca + input type-->
                     <div class="col-12 h-100 flex_center ">
                         <button class="h_input_search w_15 flex_center border_l_button"><i class="fa-solid fa-search fa-md bg_icons_light"></i></button>
-                        <input class="h_input_search ps-3 w_85 border_r_input" type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input class="h_input_search ps-3 w_85 border_r_input" type="text" placeholder="Cerca o inizia una nuova chat" v-model="inputSearch">
                     </div>
                 </div>
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div v-for="(contact, index) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(index)" :class="index === activeContact ? 'active': ''">
+                    <div v-for="(contact, index, date) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(index)" v-if="contact.name.toLowerCase().includes(inputSearch.toLowerCase())" :class="index === activeContact ? 'active': ''" >
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
                             <img class="pro_pics_xs" :src="'./assets/src/avatar' + contact.avatar + '.jpg'" alt="User_Profile_Picture">
@@ -82,13 +82,15 @@
                         <!-- UserName (dinamico) -->
                         <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
                             <ul class="unstyled pt-3">
+                                <!-- UserName Dinamico -->
                                 <li class="fs_lg">{{contact.name}}</li>
-                                <li class="fs_md">Ultimo Messaggio Inviato</li>
+                                <!-- Messaggio dinamico -->
+                                <li class="fs_md">{{contact.messages.at(-1).message.slice()}}</li>
                             </ul>
                         </div>
                         <!-- Orario Mex (dinamico) -->
                         <div class="col-2 h-100 d-flex flex-column pt-3 pe-3 align-items-end justify-content-start">
-                            <span class="fs_sm">12:00</span>
+                            <span class="fs_sm">{{contact.messages.at(-1).date.slice(-8,-3)}}</span>
                         </div>
                     </div>
                 </div>

@@ -206,13 +206,17 @@ const app = new Vue({
         // Contatto Attivo
         activeContact: 0,
         // Task vuota (da ascoltare all'input)
-        myMessage: ''
+        myMessage: '',
+        // Search Text
+        inputSearch: '',
     },
     methods: {
+        // Chat attiva
         activeChat(index) {
             this.activeContact = index
             console.log(this.activeContact);
         },
+        // Invio di messaggio
         sendMessage() {
             console.log("Sto Ascoltando");
             // Creo un oggetto vuoto
@@ -244,6 +248,6 @@ const app = new Vue({
             }
             // Ora pusho questo elemento dentro all'array principale
             this.contacts[this.activeContact].messages.push(risposta)
-        }
+        },
     },
 })
