@@ -318,7 +318,11 @@ body {
     align-items: center;
 }
 
+/* Classe Attiva active */
 
+.active {
+    background-color: var(--active_Chat_bgcolor);
+}
 
 
 

@@ -74,7 +74,7 @@
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div v-for="(contact, index) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(index)">
+                    <div v-for="(contact, index) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(index)" :class="index === activeContact ? 'active': ''">
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
                             <img class="pro_pics_xs" :src="'./assets/src/avatar' + contact.avatar + '.jpg'" alt="User_Profile_Picture">
