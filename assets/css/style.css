@@ -276,8 +276,8 @@ body {
 
 /* Messaggio inviato, classe unica per operatore Ternario */
 .sent_m {
-    /* Col 5 */
-    width: calc(100% / 12) * 5;
+    flex: 0 0 auto;
+    width: 41.66666667%;
     /* H 75% */
     height: 75%;
     /* Bg Color e b-radius */
@@ -290,8 +290,8 @@ body {
 
 /* Messaggio ricevuto, classe unica per operatore Ternario */
 .received_m {
-    /* Col 5 */
-    width: calc(100% / 12) * 5;
+    flex: 0 0 auto;
+    width: 41.66666667%;
     /* H 75% */
     height: 75%;
     /* Bg Color e b-radius */
