@@ -104,12 +104,12 @@
                     <!-- Profilo Utente della chat (dovrebbe esser dinamico, con V-for) -->
                     <div :class="users_friend_profile">
                         <!-- Pro pics (dinamica) -->
-                        <div class="col-4 h-100 flex_center">
+                        <div class="col-2 h-100 d-flex justify-content-start align-items-center ps-3">
                             <img class="pro_pics_sm" :src="'./assets/src/avatar' + contacts[activeImage].avatar + '.jpg'" alt="User_Profile_Picture">
                             <!-- './assets/src/avatar' + contatto.avatar + '.jpg' -->
                         </div>
                         <!-- UserName (dinamico) -->
-                        <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
+                        <div class="col-10 h-100 d-flex ps-4 flex-column align-items-start justify-content-center">
                             <ul class="unstyled pt-3">
                                 <li>{{contacts[activeImage].name}}</li>
                                 <li>Ultimo Accesso oggi alle 12:00 </li>
@@ -127,8 +127,8 @@
                 <div :class="message_zone_class">
                     <!-- messaggi dell'utente Tutti con v-for-->
                     <div class="col-9 bg-danger h_message mb-2 d-flex justify-content-between align-items-center">
-                        <!-- messaggio ricevuto -->
-                        <div class="col-5 h-75 bg_chat_friend d-flex justify-content-evenly align-items-center flex-nowrap">    
+                        <!-- messaggio ricevuto, creato classe unica per il ternario -->
+                        <div class="sent_m">    
                             <!-- Messaggio Received -->
                             <div class="col-10 h-100 d-flex justify-content-start align-items-center">
                                 <span class="ps-3">Qui Messaggio amico</span>
@@ -138,8 +138,8 @@
                                 <span class="fs_sm pt-2 pe-2"> <span style="color: transparent;" class="px-2">Qui data transparent</span>ora</span>
                             </div>
                         </div>                        
-                        <!-- messaggio inviato -->
-                        <div class="col-5 h-75 bg_chat_user d-flex justify-content-evenly align-items-center flex-nowrap">
+                        <!-- messaggio inviato, creato classe unica per il ternario -->
+                        <div class="received_m">
                             <!-- Messaggio Sent -->
                             <div class="col-10 h-100 d-flex justify-content-start align-items-center">
                                 <span class="ps-3">Qui messaggio inviato</span>
