@@ -231,6 +231,21 @@ const app = new Vue({
             }
             // Clear dell'input
             this.myMessage = ''
+
+            // Richiamo la set timing function
+            // dopo 1secondo richiama la function subito sotto
+            setTimeout(this.automaticAnswer, 1000)
+        },
+        // Creo la timing function
+        automaticAnswer() {
+            // Creo un nuovo elemento per la risposta
+            const risposta = {
+                date: '10/01/2020 16:00:00',
+                message: 'ok',
+                status: 'received'
+            }
+            // Ora pusho questo elemento dentro all'array principale
+            this.contacts[this.active].messages.push(risposta)
         }
     },
 })
