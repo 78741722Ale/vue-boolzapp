@@ -234,7 +234,7 @@ const app = new Vue({
             // dopo 1secondo richiama la function subito sotto
             setTimeout(this.automaticAnswer, 1000)
         },
-        // Creo la timing function
+        // Creo la timing function, per una risposta automatica
         automaticAnswer() {
             // Creo un nuovo elemento per la risposta
             const risposta = {
