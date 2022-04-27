@@ -147,7 +147,7 @@
                     </div>
                     <!-- Input messaggio -->
                     <div class="col-10 h-100 d-flex justify-content-center align-items-center">
-                        <input class="w-100 px-2 h_input_message" type="text" placeholder="Scrivi un Messaggio">
+                        <input class="w-100 px-2 h_input_message" type="text" v-model="myMessage" placeholder="Scrivi un Messaggio" @keyup.enter="sendMessage">
                     </div>
                     <!-- Audio Icon -->
                     <div :class="under_icons_utilities">

@@ -205,11 +205,32 @@ const app = new Vue({
         activeImage: 0,
         // Contatto Attivo
         activeContact: 0,
+        // chat attiva
+        active: 0,
+        // Task vuota (da ascoltare all'input)
+        myMessage: ''
     },
     methods: {
         activeChat(index) {
             this.activeContact = index
             console.log(this.activeContact);
+        },
+        sendMessage() {
+            console.log("Sto Ascoltando");
+            // Creo un oggetto vuoto
+            let newMex = {
+                date: '10/01/2020 15:51:00',
+                message: this.myMessage,
+                status: 'sent'
+            }
+            if (this.myMessage != '') {
+                // Pusho nell'array principale
+                this.contacts[this.active].messages.push(newMex)
+            } else {
+                alert("Non puoi non scrivere niente")
+            }
+            // Clear dell'input
+            this.myMessage = ''
         }
     },
 })
