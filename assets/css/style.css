@@ -32,14 +32,13 @@ input_Chat_bgcolor - zona input in basso
 .bg_input_search {
     background-color: var(--input-search_bgcolor);
 }
-
-
 .bg_ricevi_notifiche {
     background-color: var(--ricevi_bg_color);
 }
 .bg_Chat_and_Answer {
     background-color: var(--Chat_and_Answer-Color);
 }
+
 /* Sfondo della chat */
 .bg_chat_image {
     background-image: url(../src/mine.jpg);
@@ -50,11 +49,13 @@ input_Chat_bgcolor - zona input in basso
 .bg_type {
     background-color: var(--input_Chat_bgcolor);
 }
+
 /* Messaggi invio */
 .bg_chat_user {
     background-color: var(--user_message_bgcolor);
     border-radius: 10px;
 }
+
 /* Messaggi risposta */
 .bg_chat_friend {
     background-color: var(--Chat_and_Answer-Color);
@@ -64,7 +65,6 @@ input_Chat_bgcolor - zona input in basso
 .bg_icons_light {
     color: var(--upper_icons_color);
 }
-
 /*#endregion*/
 
 /*#region Elementi di contenimento */
@@ -81,6 +81,9 @@ input_Chat_bgcolor - zona input in basso
     padding: 0;
     box-sizing: border-box;
 }
+/*#endregion */
+
+/*#region Width and Heigth of main containers */
 
 /* Regole del Body */
 body {
@@ -118,6 +121,7 @@ body {
 #app_main {
     width: calc(100% - 35%);
 }
+
 /*#endregion */
 
 /*#region Utilities principali  */
@@ -132,7 +136,6 @@ body {
 .h_xs {
     height: 85px;
 }
-
 /* Altezza ricevi notifiche */
 .h_sm {
     height: 90px;
@@ -154,15 +157,16 @@ body {
     height: 80px;
 }
 
+/*#region Input type search classes */
+
 /* w del button */
 .w_15 {
     width: 15%;
 }
-
+/* Larghezza dell'input di ricerca */
 .w_85 {
     width: 85%;
 }
-
 /* h input messaggio */
 .h_input_message {
     height: 60%;
@@ -176,33 +180,44 @@ body {
     border: 0.2px solid lightgray;
 }
 
+/* Border degli input type, a DX */
 .border_r_input {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
+/* Border degli input type, a SX */
 .border_l_button {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-/* Pro Pics Utente (sofia) */
+/*#endregion */
+
+/*#region Profile Pictures  */
+
+/* Pro Pics Utente */
 .pro_pics_xs {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
 }
 /* Pro Pics vari utenti */
 .pro_pics_sm {
     width: 70px;
     height: 70px;
 }
-
 /* Common delle pro pics */
 .pro_pics_xs,
 .pro_pics_sm {
     object-fit: cover;
     border-radius: 50%;
 }
+
+/*#endregion */
+
+
+
+
 
 /* font nome utente */
 .fs_lg {
@@ -274,6 +289,8 @@ body {
 
 /*#endregion */
 
+/*#region Main Chats classes  */
+
 /* Messaggio inviato, classe unica per operatore Ternario */
 .sent_m {
     flex: 0 0 auto;
@@ -318,8 +335,9 @@ body {
     align-items: center;
 }
 
-/* Classe Attiva active */
+/*#endregion */
 
+/* Classe Attiva */
 .active {
     background-color: var(--active_Chat_bgcolor);
 }
