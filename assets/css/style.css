@@ -308,6 +308,26 @@ body {
     flex-wrap: nowrap;
 }
 
+/* Colonna del messaggio, classe unica per operatore Ternario */
+.message_box {
+    /* Col 9, classe di bootstrap */
+    width: 75%;
+    flex: 0 0 auto;
+    /* altezza della col */
+    height: 80px;
+    /* margin bottom */
+    margin-bottom: 0.5rem !important;
+    /* Allineamento */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
 
 
 
