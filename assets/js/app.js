@@ -205,8 +205,6 @@ const app = new Vue({
         activeImage: 0,
         // Contatto Attivo
         activeContact: 0,
-        // chat attiva
-        active: 0,
         // Task vuota (da ascoltare all'input)
         myMessage: ''
     },
@@ -225,7 +223,7 @@ const app = new Vue({
             }
             if (this.myMessage != '') {
                 // Pusho nell'array principale
-                this.contacts[this.active].messages.push(newMex)
+                this.contacts[this.activeContact].messages.push(newMex)
             } else {
                 alert("Non puoi non scrivere niente")
             }
@@ -245,7 +243,7 @@ const app = new Vue({
                 status: 'received'
             }
             // Ora pusho questo elemento dentro all'array principale
-            this.contacts[this.active].messages.push(risposta)
+            this.contacts[this.activeContact].messages.push(risposta)
         }
     },
 })
