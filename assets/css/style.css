@@ -303,7 +303,7 @@ body {
     /* Display Flex */
     display: flex;
     /* Tutto l'allineamento */
-    justify-content:end;
+    justify-content: end;
     align-items: center;
     flex-wrap: nowrap;
 }

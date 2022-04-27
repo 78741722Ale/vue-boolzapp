@@ -74,15 +74,15 @@
                 <!-- Tutte le chat, qua va anche scrollbar (zona OK) -->
                 <div :class="all_chat_class">
                     <!-- Chat con V-For, intanto ne metto una (e il colore dovrebbe essere all'hover) -->
-                    <div v-for="(contatto, i) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(index)">
+                    <div v-for="(contact, index) in contacts" class="col-12 h_chat d-flex justify-content-center align-items-center" @click="activeChat(index)">
                         <!-- Pro pics (dinamica) -->
                         <div class="col-2 h-100 flex_center">
-                            <img class="pro_pics_xs" :src="'./assets/src/avatar' + contatto.avatar + '.jpg'" alt="User_Profile_Picture">
+                            <img class="pro_pics_xs" :src="'./assets/src/avatar' + contact.avatar + '.jpg'" alt="User_Profile_Picture">
                         </div>
                         <!-- UserName (dinamico) -->
                         <div class="col-8 h-100 d-flex flex-column align-items-start justify-content-center">
                             <ul class="unstyled pt-3">
-                                <li class="fs_lg">{{contatto.name}}</li>
+                                <li class="fs_lg">{{contact.name}}</li>
                                 <li class="fs_md">Ultimo Messaggio Inviato</li>
                             </ul>
                         </div>

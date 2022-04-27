@@ -209,6 +209,7 @@ const app = new Vue({
     methods: {
         activeChat(index) {
             this.activeContact = index
+            console.log(this.activeContact);
         }
     },
 })
