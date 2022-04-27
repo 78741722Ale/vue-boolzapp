@@ -203,18 +203,12 @@ const app = new Vue({
         ],
         // Immagine Attiva
         activeImage: 0,
-        // Array vuoto
-        chat_corrente: []
+        // Contatto Attivo
+        activeContact: 0,
     },
     methods: {
-        activeChat(contatto) {
-            // Creo array vuoto della chat corrente
-            this.chat_corrente = [];
-            // pusho il parametro
-            this.chat_corrente.push(contatto)
-            console.log(this.chat_corrente);
-            // Ciclo for each
-
+        activeChat(index) {
+            this.activeContact = index
         }
     },
 })

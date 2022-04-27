@@ -89,20 +89,9 @@ body {
     font-family: Helvetica, sans-serif;
     position: relative;
     z-index: -1;
-}
-
-/* Header in sottofondo */
-.b_header {
-    width: var(--Body_width);
-    height: 10%;
-    background-color: var(--Body_Header_BG);
-}
-
-/* Main in sottofondo */
-.b_main {
-    width: var(--Body_width);
-    height: calc(100vh - 10%);
-    background-color: var(--body_main_bgcolor);
+    background-image: linear-gradient(to bottom, var(--Body_Header_BG) 0px, 
+    var(--Body_Header_BG) 120px, var(--body_main_bgcolor) 120px, 
+    var(--body_main_bgcolor) 100%);
 }
 
 /* Container principale */
@@ -199,13 +188,13 @@ body {
 
 /* Pro Pics Utente (sofia) */
 .pro_pics_xs {
-    width: 75%;
-    height: 75%;
+    width: 80px;
+    height: 80px;
 }
 /* Pro Pics vari utenti */
 .pro_pics_sm {
-    width: 60%;
-    height: 80%;
+    width: 70px;
+    height: 70px;
 }
 
 /* Common delle pro pics */
