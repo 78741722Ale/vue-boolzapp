@@ -251,7 +251,7 @@ const app = new Vue({
         },
         // Methods per attivare lo show del menu a tendina
         visibleDrop() {
-            document.getElementById("Dropdown").classList.toggle("show_item");
+            document.querySelector(".Dropdown").classList.toggle("show_item");
         }
     },
 })
