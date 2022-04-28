@@ -141,7 +141,7 @@
                                     <!-- Avrà anche una function al click -->
                                     <i @click="visibleDrop(index)" class="fa-solid pe-2 chevron_style fa-chevron-down"></i>  
                                     <!-- Menu a tendina -->
-                                    <ul class="dropdown_class Dropdown" v-if="message_dropdown[index].status === true ? 'show_item' : ''">
+                                    <ul class="dropdown_class Dropdown" v-if="message_dropdown.status && message_dropdown.activeMessage == index">
                                         <li>Message Info</li>
                                         <li>Delete Message</li>
                                     </ul>

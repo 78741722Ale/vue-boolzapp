@@ -211,7 +211,7 @@ const app = new Vue({
         inputSearch: '',
         // Messaggio attivo
         message_dropdown: {
-            activeMessage: 0,
+            activeMessage: false,
             status: false,
             // messaggio attivo, suo indice e suo stato, poi condizione doppia (in html)
         }
@@ -257,15 +257,24 @@ const app = new Vue({
         },
         // Methods per attivare lo show del menu a tendina
         visibleDrop(index) {
-            this.activeMessage = index
-            console.log(`Sto cliccando ${this.activeMessage}`); // Vedo gli indici dei messaggi
+            console.log(index);
+            console.log(`Sto cliccando ${this.message_dropdown.activeMessage}`); // Vedo gli indici dei messaggi
             console.log(`Questa è la verifica dello status dei messaggi ${this.message_dropdown.status}`); // verifico e in effetti mi da false
+            if (this.message_dropdown.activeMessage !== false && this.message_dropdown.activeMessage !== index) {
+                this.message_dropdown.activeMessage = false
+                this.message_dropdown.status = false
+            }
+            console.log(`Sto verificando (1) ${this.message_dropdown.activeMessage}`);
+            console.log(`Sto verificando (1) ${this.message_dropdown.status}`);
+            this.message_dropdown.activeMessage = index
             // Condizione v-if per impostare stato differente
-            if (this.message_dropdown.status === false) {
-                this.message_dropdown.status = true;
-            } else {
+            if (this.message_dropdown.status) {
                 this.message_dropdown.status = false;
+            } else {
+                this.message_dropdown.status = true;
             };
+            console.log(`Sto verificando (2) ${this.message_dropdown.activeMessage}`);
+            console.log(`Sto verificando (2) ${this.message_dropdown.status}`);
         }
     },
 })

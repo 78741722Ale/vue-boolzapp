@@ -381,15 +381,6 @@ body {
     display: block;
 }
 
-/* Classe da attivare al click */
-.show_item {
-    display: block;
-}
-
-.hidden_item {
-    display: none;
-}
-
 
 /*#endregion */
 
