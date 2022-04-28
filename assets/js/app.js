@@ -260,7 +260,7 @@ const app = new Vue({
             this.activeMessage = index
             console.log(`Sto cliccando ${this.activeMessage}`); // Vedo gli indici dei messaggi
             console.log(`Questa è la verifica dello status dei messaggi ${this.message_dropdown.status}`); // verifico e in effetti mi da false
-
+            // Condizione v-if per impostare stato differente
             if (this.message_dropdown.status === false) {
                 this.message_dropdown.status = true;
             } else {
