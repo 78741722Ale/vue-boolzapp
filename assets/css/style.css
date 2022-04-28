@@ -372,7 +372,6 @@ body {
 
 /* I list item da rendere visibili */
 .dropdown_class li {
-    display: none;
     align-self: center;
     color: rgb(144, 144, 144);
     margin: 5px 5px 5px 0px;

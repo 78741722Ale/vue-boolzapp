@@ -259,8 +259,13 @@ const app = new Vue({
         visibleDrop(index) {
             this.activeMessage = index
             console.log(`Sto cliccando ${this.activeMessage}`); // Vedo gli indici dei messaggi
-            this.message_dropdown.status = true // ora al click setto lo stato su true
-            console.log(`Questa è la verifica dello status dei messaggi ${this.message_dropdown.status}`); // verifico e in effetti mi da true
+            console.log(`Questa è la verifica dello status dei messaggi ${this.message_dropdown.status}`); // verifico e in effetti mi da false
+
+            if (this.message_dropdown.status === false) {
+                this.message_dropdown.status = true;
+            } else {
+                this.message_dropdown.status = false;
+            };
         }
     },
 })
