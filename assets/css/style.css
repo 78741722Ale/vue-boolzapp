@@ -359,7 +359,7 @@ body {
 
 /* contenuto Del dropdown  */
 .dropdown_class {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 70%;
     right: 30%;
@@ -371,6 +371,7 @@ body {
     border-radius: 5px;
 }
 
+/* I list item da rendere visibili */
 .dropdown_class li {
     align-self: center;
     color: rgb(144, 144, 144);
@@ -378,6 +379,11 @@ body {
     padding: 3px 5px;
     text-decoration: none;
     list-style: none;
+    display: block;
+}
+
+/* Classe da attivare al click */
+.show_item {
     display: block;
 }
 

@@ -249,5 +249,9 @@ const app = new Vue({
             // Ora pusho questo elemento dentro all'array principale
             this.contacts[this.activeContact].messages.push(risposta)
         },
+        // Methods per attivare lo show del menu a tendina
+        visibleDrop() {
+            document.getElementById("Dropdown").classList.toggle("show_item");
+        }
     },
 })
