@@ -359,7 +359,6 @@ body {
 
 /* contenuto Del dropdown  */
 .dropdown_class {
-    display: none;
     position: absolute;
     top: 70%;
     right: 30%;
@@ -373,6 +372,7 @@ body {
 
 /* I list item da rendere visibili */
 .dropdown_class li {
+    display: none;
     align-self: center;
     color: rgb(144, 144, 144);
     margin: 5px 5px 5px 0px;
@@ -386,6 +386,11 @@ body {
 .show_item {
     display: block;
 }
+
+.hidden_item {
+    display: none;
+}
+
 
 /*#endregion */
 

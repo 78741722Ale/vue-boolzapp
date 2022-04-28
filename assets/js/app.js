@@ -209,6 +209,12 @@ const app = new Vue({
         myMessage: '',
         // Search Text
         inputSearch: '',
+        // Messaggio attivo
+        message_dropdown: {
+            activeMessage: 0,
+            status: false,
+            // messaggio attivo, suo indice e suo stato, poi condizione doppia (in html)
+        }
     },
     methods: {
         // Chat attiva
@@ -250,8 +256,11 @@ const app = new Vue({
             this.contacts[this.activeContact].messages.push(risposta)
         },
         // Methods per attivare lo show del menu a tendina
-        visibleDrop() {
-            document.querySelector(".Dropdown").classList.toggle("show_item");
+        visibleDrop(index) {
+            this.activeMessage = index
+            console.log(`Sto cliccando ${this.activeMessage}`); // Vedo gli indici dei messaggi
+            this.message_dropdown.status = true // ora al click setto lo stato su true
+            console.log(`Questa è la verifica dello status dei messaggi ${this.message_dropdown.status}`); // verifico e in effetti mi da true
         }
     },
 })
