@@ -135,8 +135,11 @@
                                 <span class="ps-3">{{message.message}}</span>
                             </div>
                             <!-- Ora Messaggio Received -->
-                            <div class="col-2 h-100 d-flex justify-content-end align-items-end">
-                                <span class="fs_sm pt-2 pe-2">{{message.date.slice(10,16)}}</span>
+                            <div class="col-2 h-100 d-flex justify-content-end align-items-end flex-column">
+                                <!-- Qui ci va il drop-down -->
+                                <div class="col-12 h-50 bg-success d-flex align-items-center justify-content-end"><i class="fa-solid pe-2 fa-chevron-down"></i>  </div> 
+                                <!-- Questo è l'orario del messaggio -->
+                                <span class="fs_sm h-50 col-12 pt-2 ps-3">{{message.date.slice(10,16)}}</span>
                             </div>
                         </div>                        
                     </div>
