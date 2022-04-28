@@ -142,8 +142,8 @@
                                     <i @click="visibleDrop(index)" class="fa-solid pe-2 chevron_style fa-chevron-down"></i>  
                                     <!-- Menu a tendina -->
                                     <ul class="dropdown_class Dropdown" v-if="message_dropdown.status && message_dropdown.activeMessage == index">
-                                        <li class="w-100">Message Info</li>
-                                        <li>Delete Message</li>
+                                        <li>Message Info</li>
+                                        <li @click="deleteItem()">Delete Message</li>
                                     </ul>
                                 </div> 
                                 <!-- Questo è l'orario del messaggio -->

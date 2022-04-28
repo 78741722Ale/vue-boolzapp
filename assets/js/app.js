@@ -275,6 +275,13 @@ const app = new Vue({
             };
             console.log(`Sto verificando (2) ${this.message_dropdown.activeMessage}`);
             console.log(`Sto verificando (2) ${this.message_dropdown.status}`);
+        },
+        // Methods per eliminare il messaggio
+        deleteItem(index) {
+            console.log(`Questo è l'indice numero: ${index}`); // Verifico l'index
+            console.log(`Sto ascoltando l'eleminazione del messaggio n° ${this.message_dropdown.activeMessage}`); // questo in effetti è l'ultimo mex
+            this.message_dropdown.activeMessage = index // ora, al messaggio di dropdown affido l'indice
+            this.contacts[this.activeContact].messages.splice(index, 1) // con splice cancello il messaggio, indipendentemente da dove sia!
         }
     },
 })
