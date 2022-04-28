@@ -137,9 +137,17 @@
                             <!-- Ora Messaggio Received -->
                             <div class="col-2 h-100 d-flex justify-content-end align-items-end flex-column">
                                 <!-- Qui ci va il drop-down -->
-                                <div class="col-12 h-50 bg-success d-flex align-items-center justify-content-end"><i class="fa-solid pe-2 fa-chevron-down"></i>  </div> 
+                                <div class="col-12 h-50 d-flex align-items-center justify-content-end rel">
+                                    <!-- Avrà anche una function al click -->
+                                    <i class="fa-solid pe-2 chevron_style fa-chevron-down"></i>  
+                                    <!-- Menu a tendina -->
+                                    <ul id="myDropdown" class="dropdown_class">
+                                        <li>Message Info</li>
+                                        <li>Delete Message</li>
+                                    </ul>
+                                </div> 
                                 <!-- Questo è l'orario del messaggio -->
-                                <span class="fs_sm h-50 col-12 pt-2 ps-3">{{message.date.slice(10,16)}}</span>
+                                <span class="fs_sm h-50 col-12 pt-2 ps-2">{{message.date.slice(10,16)}}</span>
                             </div>
                         </div>                        
                     </div>
